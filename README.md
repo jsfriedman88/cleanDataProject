@@ -4,8 +4,7 @@ cleanDataProject
 Course Project:
 
 
- 1) File List 
-=============== 
+#1) File List
  This repo consists of 3 files:  
  - README.md - Explains how the R code works  
  - Codebook.md -   Documents the variables in the final tidy data set  
