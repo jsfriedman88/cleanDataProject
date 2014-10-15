@@ -4,7 +4,8 @@ cleanDataProject
 Course Project:
 
 
- #1) File List  
+ 1) File List 
+=============== 
  This repo consists of 3 files:  
  - README.md - Explains how the R code works  
  - Codebook.md -   Documents the variables in the final tidy data set  
@@ -72,10 +73,10 @@ Course Project:
  				(30 subs X 6 activities = 30 rows)
  				 (subject + activity + 83 motion variables = 85 cols)
  - Loop by subject and then within that loop by activity
--create a tmp table with motion data for each subject/activity pair (eg sub1, act 1)
--compute mean motion data for this tmp table
--populate mean data from tmp table into proper row of final tidy table.
- -Write the final tidy table "mean_data.txt" to a file
+  - create a tmp table with motion data for each subject/activity pair (eg sub1, act 1)
+  - compute mean motion data for this tmp table
+  - populate mean data from tmp table into proper row of final tidy table.
+  - Write the final tidy table "mean_data.txt" to a file
  
  #4) Displaying output
  
