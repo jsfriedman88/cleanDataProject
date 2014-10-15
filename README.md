@@ -67,11 +67,10 @@ Course Project:
   
   Change activity numbers in col 2 of the DF to the proper enum values eg 1 changes to "WALKING"
  
- Create final tidy data frame with avg values for each motion variable
  
  Create mean_data DF with 180 rows and 85 cols.
  				(30 subs X 6 activities = 30 rows)
- 				 (subject + activity + 83 motion variables = 85 cols)
+ 				 (subject + activity + 83 motion variables = 85 cols).  This will hold the final tidy data set.
  - Loop by subject and then within that loop by activity
   - create a tmp table with motion data for each subject/activity pair (eg sub1, act 1)
   - compute mean motion data for this tmp table
