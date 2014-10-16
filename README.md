@@ -84,7 +84,7 @@ Course Project:
   To display the output in a readable format
  - run the following R command on the mean_data.txt file created by the R script  
 
- data<-read.table("./mean_data.txt",header=TRUE)   [1]
+ data<-read.table("./mean_data.txt",header=TRUE)  #[1]
 
  1. Code for this command to read the output file was taken from a Discussion Forum post by David Hood
  https://class.coursera.org/getdata-008/forum/thread?thread_id=24
