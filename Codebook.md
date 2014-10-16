@@ -7,10 +7,10 @@ Column 1 is called "subject".  It contains values from 1 - 30 that correspond to
 Column 2 is called "activity".  It contains one of the six following activities that the subject is performing
 while being measured: WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING  
 
-Columns 3 - 85 have the motion data associated with the tests. These columns all contain mean and standard deviation values.
+Columns 3 - 79 have  motion data associated with the tests. These columns all contain mean and standard deviation values.
 The descriptive names for these columns are a concatenation of four components:  
 
-The first component is one character and is either a "t" or an "f"  If the character is a "t" this is a raw data measurement.
+The first component is one character and is either a "t" or an "f"  If the character is a "t" this is a time raw data measurement.  
 If the first charcter is an "f" then this value is the result of a fast fourier transform performed on the
 associated "t" value  (eg fBodyAccmeanX is the result of a fast fourier transform performed on tBodyAccmeanX).
 Fast fourier transforms were only performed on a subset of the "t" values so there is not a one to one correspondence
@@ -29,16 +29,17 @@ Here is an example parsing of the descriptive name for column 3.  The column nam
 
 Since the first character is "t", this is a raw data measumrent, not the result of a fast fourier transform.  The
 motion being measured is BodyAcc.  It is a mean value (not a standard deviation value).  It is measuing motion in the
-X direction.  
+X direction. 
 
-Here is a list of the column names for columns 3 - 85:  
+Columns 80 - 85 have additional  mean motion data associated with the tests. These data are associated with 
+angles and each name begins with "angle"
 
-tBodyAccmeanX	tBodyAccmeanY	tBodyAccmeanZ	tBodyAccstdX	tBodyAccstdY	tBodyAccstdZ	tGravityAccmeanX	tGravityAccmeanY	tGravityAccmeanZ	tGravityAccstdX	tGravityAccstdY	tGravityAccstdZ	tBodyAccJerkmeanX	tBodyAccJerkmeanY	tBodyAccJerkmeanZ	tBodyAccJerkstdX	tBodyAccJerkstdY	tBodyAccJerkstdZ	tBodyGyromeanX	tBodyGyromeanY	tBodyGyromeanZ	tBodyGyrostdX	tBodyGyrostdY	tBodyGyrostdZ	tBodyGyroJerkmeanX	tBodyGyroJerkmeanY	tBodyGyroJerkmeanZ	tBodyGyroJerkstdX	tBodyGyroJerkstdY	tBodyGyroJerkstdZ	tBodyAccMagmean	tBodyAccMagstd	tGravityAccMagmean	tGravityAccMagstd	tBodyAccJerkMagmean	tBodyAccJerkMagstd	tBodyGyroMagmean	tBodyGyroMagstd	tBodyGyroJerkMagmean	tBodyGyroJerkMagstd	fBodyAccmeanX	fBodyAccmeanY	fBodyAccmeanZ	fBodyAccstdX	fBodyAccstdY	fBodyAccstdZ	fBodyAccmeanFreqX	fBodyAccmeanFreqY	fBodyAccmeanFreqZ	fBodyAccJerkmeanX	fBodyAccJerkmeanY	fBodyAccJerkmeanZ	fBodyAccJerkstdX	fBodyAccJerkstdY	fBodyAccJerkstdZ	fBodyAccJerkmeanFreqX	fBodyAccJerkmeanFreqY	fBodyAccJerkmeanFreqZ	fBodyGyromeanX	fBodyGyromeanY	fBodyGyromeanZ	fBodyGyrostdX	fBodyGyrostdY	fBodyGyrostdZ	fBodyGyromeanFreqX	fBodyGyromeanFreqY	fBodyGyromeanFreqZ	fBodyAccMagmean	fBodyAccMagstd	fBodyAccMagmeanFreq	fBodyBodyAccJerkMagmean	fBodyBodyAccJerkMagstd	fBodyBodyGyroMagmean	fBodyBodyGyroMagstd	fBodyBodyGyroJerkMagmean	fBodyBodyGyroJerkMagstd	fBodyBodyGyroJerkMagmeanFreq	angletBodyAccJerkMeangravityMean	angletBodyGyroMeangravityMean	angletBodyGyroJerkMeangravityMean	angleXgravityMean	angleYgravityMean	angleZgravityMean
-
-#Note on the measurement data  
+#Additional note on the measurement data  
 The values shown in columns 3 - 85 are the mean of several observations (rows) from the raw data for a given subject/activity.
 So for example if there are 90 rows in the raw data for subject1//activity 1, the output in the final tidy data set for
-each of the motion measurements is the sum of the value for the 90 rows divided by 90.  
+each of the motion measuremnts is the sum of the value for the 90 rows divided by 90.  
+
+
 
 
 
