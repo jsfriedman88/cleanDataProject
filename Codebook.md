@@ -31,6 +31,10 @@ Since the first character is "t", this is a raw data measumrent, not the result 
 motion being measured is BodyAcc.  It is a mean value (not a standard deviation value).  It is measuing motion in the
 X direction.  
 
+Here is a list of the column names for columns 3 - 85:  
+
+tBodyAccmeanX	tBodyAccmeanY	tBodyAccmeanZ	tBodyAccstdX	tBodyAccstdY	tBodyAccstdZ	tGravityAccmeanX	tGravityAccmeanY	tGravityAccmeanZ	tGravityAccstdX	tGravityAccstdY	tGravityAccstdZ	tBodyAccJerkmeanX	tBodyAccJerkmeanY	tBodyAccJerkmeanZ	tBodyAccJerkstdX	tBodyAccJerkstdY	tBodyAccJerkstdZ	tBodyGyromeanX	tBodyGyromeanY	tBodyGyromeanZ	tBodyGyrostdX	tBodyGyrostdY	tBodyGyrostdZ	tBodyGyroJerkmeanX	tBodyGyroJerkmeanY	tBodyGyroJerkmeanZ	tBodyGyroJerkstdX	tBodyGyroJerkstdY	tBodyGyroJerkstdZ	tBodyAccMagmean	tBodyAccMagstd	tGravityAccMagmean	tGravityAccMagstd	tBodyAccJerkMagmean	tBodyAccJerkMagstd	tBodyGyroMagmean	tBodyGyroMagstd	tBodyGyroJerkMagmean	tBodyGyroJerkMagstd	fBodyAccmeanX	fBodyAccmeanY	fBodyAccmeanZ	fBodyAccstdX	fBodyAccstdY	fBodyAccstdZ	fBodyAccmeanFreqX	fBodyAccmeanFreqY	fBodyAccmeanFreqZ	fBodyAccJerkmeanX	fBodyAccJerkmeanY	fBodyAccJerkmeanZ	fBodyAccJerkstdX	fBodyAccJerkstdY	fBodyAccJerkstdZ	fBodyAccJerkmeanFreqX	fBodyAccJerkmeanFreqY	fBodyAccJerkmeanFreqZ	fBodyGyromeanX	fBodyGyromeanY	fBodyGyromeanZ	fBodyGyrostdX	fBodyGyrostdY	fBodyGyrostdZ	fBodyGyromeanFreqX	fBodyGyromeanFreqY	fBodyGyromeanFreqZ	fBodyAccMagmean	fBodyAccMagstd	fBodyAccMagmeanFreq	fBodyBodyAccJerkMagmean	fBodyBodyAccJerkMagstd	fBodyBodyGyroMagmean	fBodyBodyGyroMagstd	fBodyBodyGyroJerkMagmean	fBodyBodyGyroJerkMagstd	fBodyBodyGyroJerkMagmeanFreq	angletBodyAccJerkMeangravityMean	angletBodyGyroMeangravityMean	angletBodyGyroJerkMeangravityMean	angleXgravityMean	angleYgravityMean	angleZgravityMean
+
 #Note on the measurement data  
 The values shown in columns 3 - 85 are the mean of several observations (rows) from the raw data for a given subject/activity.
 So for example if there are 90 rows in the raw data for subject1//activity 1, the output in the final tidy data set for
