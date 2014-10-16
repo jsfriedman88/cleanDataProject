@@ -36,8 +36,8 @@ angles and each name begins with "angle"
 
 #Additional note on the measurement data  
 The values shown in columns 3 - 85 are the mean of several observations (rows) from the raw data for a given subject/activity.
-So for example if there are 90 rows in the raw data for subject1//activity 1, the output in the final tidy data set for
-each of the motion measuremnts is the sum of the value for the 90 rows divided by 90.  
+So for example if there are 95 rows in the raw data for subject1//activity 1, the output in the final tidy data set for
+each of the motion measurements is the sum of the value for the 95 rows divided by 95.  
 
 
 
