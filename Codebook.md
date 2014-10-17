@@ -23,9 +23,10 @@ associated "t" value  (eg fBodyAccmeanX is the result of a fast fourier transfor
 Fast fourier transforms were only performed on a subset of the "t" values so there is not a one to one correspondence
 between "t" values and "f" values.  The units for these columns are frequency 
 
-mean = average
+mean = average  
   
-std = standard deviation  
+std = standard deviation  (All of these columns are either mean or std values, so each columname will 
+have either mean or std in its name)
 
 acc = acceleration  
 
