@@ -69,7 +69,7 @@ Course Project:
  
  
  Create mean_data DF with 180 rows and 88 cols.
- 				(30 subs X 6 activities = 30 rows)
+ 				(30 subs X 6 activities = 180 rows)
  				 (subject + activity + 86 motion variables = 88 cols).  This will hold the final tidy data set.
  - Loop by subject and then within that loop by activity
   - create a tmp table with motion data for each subject/activity pair (eg sub1, act 1)
