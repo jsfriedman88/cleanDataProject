@@ -1,4 +1,4 @@
-#Clean and analyze the Samsung motion data set
+#clean and analyze the Samsung motion data set
 fileUrl<-download.file(fileUrl,destfile="./Dataset.zip")
 unzip("./Dataset.zip")
 
@@ -29,8 +29,21 @@ test<-cbind(test_subject,test_activity,test)
 # combine the train and test data into one DF
 train_and_test<-rbind(train,test)
 
-# select only columns for mean and std
-train_and_test<-train_and_test[ ,c(1,2,3,4,5,6,7,8,43,44,45,46,47,48,83,84,85,86,87,88,123,124,125,126,127,128, 163,164,165,166,167,168,203,204,216,217,229,230,242,243,255,256,268,269,270,271,272,273,296,297,298,347,348,349,350,351,352, 375,376,377,426,427,428,429,430,431,454,455,456,505,506,515,518,519,531,532,544,545,554,558,559,560,561,562,563)]
+# get set of columns with "mean" in their name
+mean_feats<-grep("mean",feat,ignore.case=TRUE)
+
+# get set of columns with "std" in their name
+std_feats<-grep("std",feat,ignore.case=TRUE)
+
+# combine mean and std lists
+combined_feats<-c(mean_feats,std_feats)
+
+# add 2 to the combined feats vector to offset for subject,activity
+combined_feats<-combined_feats+2
+
+# select only columns with mean and std in their name from the combined train and test DF. also prepend subject and activity columns
+train_and_test<-train_and_test[ ,c(1,2,combined_feats)]
+
 
 # strip the "." chars out of the column names
 newNames<-gsub("\\.","",names(train_and_test),) 
@@ -41,8 +54,8 @@ train_and_test$activity<-factor(train_and_test$activity,level=1:6,labels=c('WALK
 
 #create DF final tidy data
 
-#create empty DF for final tidy data   30 subs X 6 Activities = 180 rows   83 features + sub + act = 85 cols
-mean_data<-as.data.frame(matrix (nrow=180,ncol=85,dimnames=(list(NULL,names(train_and_test)))))
+#create empty DF for final tidy data   30 subs X 6 Activities = 180 rows   86 features + sub + act = 88 cols
+mean_data<-as.data.frame(matrix (nrow=180,ncol=88,dimnames=(list(NULL,names(train_and_test)))))
 
 #create factor of the 6 activities
 act_list<-factor(c('WALKING','WALKING_UPSTAIRS','WALKING_DOWNSTAIRS','SITTING','STANDING','LAYING'))
@@ -60,7 +73,7 @@ for (sub in 1:30){
                 mean_data[row_count,1]<-sub
                 mean_data[row_count,2]<-act
                 
-                mean_data[row_count,3:85]<-as.numeric(colSums(tmp_table[3:85])/nrow(tmp_table))
+                mean_data[row_count,3:88]<-as.numeric(colSums(tmp_table[3:88])/nrow(tmp_table))
                 
         }
 }
