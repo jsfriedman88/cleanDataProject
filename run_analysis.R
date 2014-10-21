@@ -35,8 +35,9 @@ mean_feats<-grep("mean",feat,ignore.case=TRUE)
 # get set of columns with "std" in their name
 std_feats<-grep("std",feat,ignore.case=TRUE)
 
-# combine mean and std lists
+# combine mean and std lists and sort in ascending order
 combined_feats<-c(mean_feats,std_feats)
+combined_feats<-sort.int(combined_feats)
 
 # add 2 to the combined feats vector to offset for subject,activity
 combined_feats<-combined_feats+2
